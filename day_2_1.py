@@ -2,11 +2,12 @@ from typing import List
 from itertools import product
 
 OPERATIONS = {
-    1: lambda x,y: x + y,
-    2: lambda x,y: x * y,
+    1: lambda x, y: x + y,
+    2: lambda x, y: x * y,
 }
 
-def compute(x: List[int])-> int:
+
+def compute(x: List[int]) -> int:
     idx = 0
     while x[idx] != 99 and idx < len(x):
         operation = x[idx]
@@ -14,8 +15,8 @@ def compute(x: List[int])-> int:
         idx += 4
     return x[0]
 
-assert compute([1,9,10,3,2,3,11,0,99,30,40,50]) == 3500
-assert compute([1,0,0,0,99]) == 2
+assert compute([1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50]) == 3500  # noqa
+assert compute([1, 0, 0, 0, 99]) == 2
 
 with open('input2.txt', mode='r') as f:
     data_str = f.readline()
