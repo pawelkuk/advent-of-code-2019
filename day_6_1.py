@@ -1,6 +1,5 @@
 from functools import reduce
 import operator
-from pprint import pprint
 from typing import List, Tuple
 
 
