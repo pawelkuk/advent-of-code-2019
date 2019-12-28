@@ -12,9 +12,7 @@ def decreases(string: str) -> bool:
     return False
 
 
-def is_valid(password: int,
-             range_min: int = 353096,
-             range_max: int = 843212) -> bool:
+def is_valid(password: int, range_min: int = 353096, range_max: int = 843212) -> bool:
     string: str = str(password)
     if len(string) != 6:
         return False
@@ -29,17 +27,17 @@ min_ = 353096
 max_ = 843212
 
 
-assert decreases('43') == True # noqa
-assert decreases('5422222') == True # noqa
-assert decreases('234567') == False # noqa
+assert decreases("43") == True  # noqa
+assert decreases("5422222") == True  # noqa
+assert decreases("234567") == False  # noqa
 
-assert has_two_adjacent('345678') == False # noqa
-assert has_two_adjacent('987') == False # noqa
-assert has_two_adjacent('4466709') == True # noqa
+assert has_two_adjacent("345678") == False  # noqa
+assert has_two_adjacent("987") == False  # noqa
+assert has_two_adjacent("4466709") == True  # noqa
 
-assert is_valid(111111) == True # noqa
-assert is_valid(223450) == False # noqa
-assert is_valid(123789) == False # noqa
+assert is_valid(111111) == True  # noqa
+assert is_valid(223450) == False  # noqa
+assert is_valid(123789) == False  # noqa
 
 count = 0
 for i in range(min_, max_):
